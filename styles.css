@@ -1,0 +1,108 @@
+body {
+    font-family: Roboto, sans-serif;
+
+}
+
+.game {
+    --cell-count: 6;
+    display: grid;
+    grid-template-columns: repeat(var(--cell-count), 40px);
+    grid-gap: 8px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border: solid 1px #707070;
+    background-color: #bbbbbb;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell--open {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor:default;
+}
+
+.cell--marked {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell--marked::before {
+    content: "🚩";
+    display: block;
+    font-size: 20px;
+}
+
+
+.cell--mined {
+    background: #976e6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:default;
+}
+
+
+.cell--mined::before {
+    content: "💣";
+    display: block;
+    font-size: 22px;
+}
+
+.cell--focus {
+    outline: solid 2px #cc0812;
+    
+}
+
+.soper{
+    background-color: rgb(116, 16, 0);
+    width: 370px;
+    height: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+}
+
+.text{
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+.main{
+    margin-left: 35%;
+    margin-right: auto;
+}
+
+.result {
+    background-color: rgb(228, 255, 174);
+    color: white;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 50px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    display: none;
+}
+
+.resultBlock > span {
+    font-size: 20px;
+}
